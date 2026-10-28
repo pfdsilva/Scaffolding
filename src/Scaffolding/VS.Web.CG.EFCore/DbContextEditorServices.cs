@@ -207,6 +207,12 @@ namespace Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore
                         statementLeadingTrivia + additionalLeadingTrivia + "    options.UseNpgsql({2}.GetConnectionString(\"{1}\"){3}));" + Environment.NewLine;
                     break;
 
+                case DbProvider.Oracle:
+                    textToAddAtEnd =
+                        leadingTrivia + "{0}." + addDbString + "<{1}>(options =>" + additionalNewline +
+                        statementLeadingTrivia + additionalLeadingTrivia + "    options.UseOracle({2}.GetConnectionString(\"{1}\"){3}));" + Environment.NewLine;
+                    break;
+
                 default:
                     break;
             }

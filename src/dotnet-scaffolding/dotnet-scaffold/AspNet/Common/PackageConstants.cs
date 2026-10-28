@@ -18,6 +18,7 @@ internal class PackageConstants
         public const string SQLite = "sqlite-efcore";
         public const string CosmosDb = "cosmos-efcore";
         public const string Postgres = "npgsql-efcore";
+        public const string Oracle = "oracle-efcore";
         public static readonly Package EfCorePackage = new("Microsoft.EntityFrameworkCore", IsVersionRequired: true);
         public static readonly Package EfCoreToolsPackage = new("Microsoft.EntityFrameworkCore.Tools", IsVersionRequired: true);
         public static readonly Package EfCoreDesignPackage = new("Microsoft.EntityFrameworkCore.Design", IsVersionRequired: true);
@@ -29,6 +30,7 @@ internal class PackageConstants
         public static readonly Package SqlitePackage = new("Microsoft.EntityFrameworkCore.Sqlite", IsVersionRequired: true);
         public static readonly Package CosmosPackage = new("Microsoft.EntityFrameworkCore.Cosmos", IsVersionRequired: true);
         public static readonly Package PostgresPackage = new("Npgsql.EntityFrameworkCore.PostgreSQL", IsVersionRequired: true);
+        public static readonly Package OraclePackage = new("Oracle.EntityFrameworkCore", IsVersionRequired: true);
         public static readonly Package SqlitePclRawBundlePackage = new("SQLitePCLRaw.bundle_e_sqlite3", IsVersionRequired: true)
         {
             UseLatestVersion = true
@@ -44,7 +46,8 @@ internal class PackageConstants
             { SqlServer, SqlServerPackage },
             { SQLite, SqlitePackage },
             { CosmosDb, CosmosPackage },
-            { Postgres, PostgresPackage }
+            { Postgres, PostgresPackage },
+            { Oracle, OraclePackage }
         };
 
         /// <summary>
@@ -64,7 +67,8 @@ internal class PackageConstants
             { SqlServer, "UseSqlServer" },
             { SQLite, "UseSqlite" },
             { Postgres, "UseNpgsql" },
-            { CosmosDb, "UseCosmos" }
+            { CosmosDb, "UseCosmos" },
+            { Oracle, "UseOracle" }
         };
     }
 

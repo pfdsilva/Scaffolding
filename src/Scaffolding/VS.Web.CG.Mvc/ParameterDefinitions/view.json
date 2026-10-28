@@ -60,7 +60,7 @@
     {
       "Name": "databaseProvider",
       "ShortName": "dbProvider",
-      "Description": "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres'."
+      "Description": "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres', 'oracle'."
     }
   ]
 }
