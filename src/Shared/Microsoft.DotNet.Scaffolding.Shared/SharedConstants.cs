@@ -8,7 +8,7 @@ namespace Microsoft.DotNet.Scaffolding.Shared
 {
     public enum DbProvider
     {
-        SqlServer, SQLite, CosmosDb, Postgres, Existing, None
+        SqlServer, SQLite, CosmosDb, Postgres, Existing, None, Oracle
     }
 
     public static class EfConstants
@@ -17,22 +17,26 @@ namespace Microsoft.DotNet.Scaffolding.Shared
         public static string SQLite = DbProvider.SQLite.ToString();
         public static string CosmosDb = DbProvider.CosmosDb.ToString();
         public static string Postgres = DbProvider.Postgres.ToString();
+        public static string Oracle = DbProvider.Oracle.ToString();
         public const string AspnetNetCoreIdentityEfPackageName = "Microsoft.AspNetCore.Identity.EntityFrameworkCore";
         public const string EfToolsPackageName = "Microsoft.EntityFrameworkCore.Tools";
         public const string SqlServerPackageName = "Microsoft.EntityFrameworkCore.SqlServer";
         public const string SqlitePackageName = "Microsoft.EntityFrameworkCore.Sqlite";
         public const string CosmosPakcageName = "Microsoft.EntityFrameworkCore.Cosmos";
         public const string PostgresPackageName = "Npgsql.EntityFrameworkCore.PostgreSQL";
+        public const string OraclePackageName = "Oracle.EntityFrameworkCore";
         public const string SQLConnectionStringFormat = "Server=(localdb)\\mssqllocaldb;Database={0};Trusted_Connection=True;MultipleActiveResultSets=true";
         public const string SQLiteConnectionStringFormat = "Data Source={0}.db";
         public const string CosmosDbConnectionStringFormat = "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
         public const string PostgresConnectionStringFormat = "server=localhost;username=postgres;database={0}";
+        public const string OracleConnectionStringFormat = "User Id=USER;Password=PASSWORD;Data Source=localhost:1521/FREEPDB1";
         public static readonly IDictionary<DbProvider, string> ConnectionStringsDict = new Dictionary<DbProvider, string>
         {
             { DbProvider.SqlServer, SQLConnectionStringFormat },
             { DbProvider.SQLite, SQLiteConnectionStringFormat },
             { DbProvider.CosmosDb, CosmosDbConnectionStringFormat },
-            { DbProvider.Postgres, PostgresConnectionStringFormat }
+            { DbProvider.Postgres, PostgresConnectionStringFormat },
+            { DbProvider.Oracle, OracleConnectionStringFormat }
         };
 
         public static readonly IDictionary<DbProvider, string> EfPackagesDict = new Dictionary<DbProvider, string>
@@ -40,7 +44,8 @@ namespace Microsoft.DotNet.Scaffolding.Shared
             { DbProvider.SqlServer, SqlServerPackageName },
             { DbProvider.SQLite, SqlitePackageName },
             { DbProvider.CosmosDb, CosmosPakcageName },
-            { DbProvider.Postgres, PostgresPackageName }
+            { DbProvider.Postgres, PostgresPackageName },
+            { DbProvider.Oracle, OraclePackageName }
         };
 
         public static readonly IDictionary<string, DbProvider> IdentityDbProviders = new Dictionary<string, DbProvider>(StringComparer.OrdinalIgnoreCase)
@@ -54,7 +59,8 @@ namespace Microsoft.DotNet.Scaffolding.Shared
             { SqlServer, DbProvider.SqlServer },
             { SQLite, DbProvider.SQLite },
             { CosmosDb, DbProvider.CosmosDb },
-            { Postgres, DbProvider.Postgres }
+            { Postgres, DbProvider.Postgres },
+            { Oracle, DbProvider.Oracle }
         };
     }
 }

@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Web.CodeGenerators.Mvc
         [Option(Name = "dataContext", ShortName = "dc", Description = "DbContext class to use")]
         public string DataContextClass { get; set; }
 
-        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres'.")]
+        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres', 'oracle'.")]
         public string DatabaseProviderString { get; set; }
         public DbProvider DatabaseProvider { get; set; }
 

@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MinimalApi
         [Option(Name = "endpointsNamespace", ShortName = "namespace", Description = "Specify the name of the namespace to use for the generated controller")]
         public string EndpointsNamespace { get; set; }
 
-        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options (without quotes) include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres'. Example: -dbProvider sqlite")]
+        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options (without quotes) include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres', 'oracle'. Example: -dbProvider sqlite")]
         public string DatabaseProviderString { get; set; }
         public DbProvider DatabaseProvider { get; set; }
 

@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Blazor
         [Option(Name = "namespaceName", ShortName = "namespace", Description = "Specify the name of the namespace to use for the generated blazor pages")]
         public string Namespace { get; set; }
 
-        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres'.")]
+        [Option(Name = "databaseProvider", ShortName = "dbProvider", Description = "Database provider to use. Options include 'sqlserver' (default), 'sqlite', 'cosmos', 'postgres', 'oracle'.")]
         public string DatabaseProviderString { get; set; }
         public DbProvider DatabaseProvider { get; set; }
 
